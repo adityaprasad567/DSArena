@@ -1,0 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    font-family: "Space Grotesk", sans-serif;
+  }
+}
+
+@layer utilities {
+  .font-tape {
+    font-family: "JetBrains Mono", monospace;
+    letter-spacing: 0.02em;
+  }
+}

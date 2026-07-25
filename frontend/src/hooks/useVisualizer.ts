@@ -18,7 +18,7 @@ export function useVisualizer<T extends StepBase>(makeSteps: () => Generator<T>)
   const [index, setIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [speed, setSpeed] = useState(1); // 0.5x - 3x
-  const timerRef = useRef<ReturnType<typeof setInterval>>();
+  const timerRef = useRef<ReturnType<typeof setInterval> | undefined>(undefined);
 
   useEffect(() => {
     setIndex(0);

@@ -41,6 +41,6 @@ export function randomBSTScript(count = 7): BSTOp[] {
   const values = new Set<number>();
   while (values.size < count) values.add(randVal(50));
   const ops: BSTOp[] = [...values].map((value) => ({ type: "insert" as const, value }));
-  ops.push({ type: "search", value: [...values][Math.floor(Math.random() * values.length)] });
+  ops.push({ type: "search", value: [...values][Math.floor(Math.random() * values.size)] });
   return ops;
 }
